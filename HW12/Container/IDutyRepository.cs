@@ -10,11 +10,11 @@ namespace HW12.Container
 {
     public interface IDutyRepository
     {
-        void Add();
-        void Update(int id);
+        void Add(Duty duty);
+        void Update(int id,Duty duty);
         void Delete(int id);
         List<Duty> GetAll();
         Duty Get(int id);
-        void ChengStatus(int id);
+        void ChengStatus(int id, Duty duty);
     }
 }

@@ -1,4 +1,6 @@
-﻿using HW12.Entity;
+﻿using HW12.Container;
+using HW12.Entity;
+using HW12.Repository;
 using HW12.Servise.Contract;
 using System;
 using System.Collections.Generic;
@@ -10,34 +12,39 @@ namespace HW12.Servise
 {
     public class DutyServise : IDutyServise
     {
-        public void Add()
+        private readonly IDutyRepository _repository;
+        public DutyServise()
         {
-            throw new NotImplementedException();
+            _repository = new DutyRepository();
+        }
+        public void Add(Duty duty)
+        {
+            _repository.Add(duty);
         }
 
-        public void ChengStatus(int id)
+        public void ChengStatus(int id, Duty duty)
         {
-            throw new NotImplementedException();
+            _repository.ChengStatus(id, duty);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _repository.Delete(id);
         }
 
         public Duty Get(int id)
         {
-            throw new NotImplementedException();
+            return _repository.Get(id);
         }
 
         public List<Duty> GetAll()
         {
-            throw new NotImplementedException();
+            return _repository.GetAll();
         }
 
-        public void Update(int id)
+        public void Update(int id, Duty duty)
         {
-            throw new NotImplementedException();
+            _repository.Update(id, duty);
         }
     }
 }

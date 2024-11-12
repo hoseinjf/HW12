@@ -9,11 +9,11 @@ namespace HW12.Servise.Contract
 {
     public interface IDutyServise
     {
-        void Add();
-        void Update(int id);
+        void Add(Duty duty);
+        void Update(int id, Duty duty);
         void Delete(int id);
         List<Duty> GetAll();
         Duty Get(int id);
-        void ChengStatus(int id);
+        void ChengStatus(int id, Duty duty);
     }
 }
