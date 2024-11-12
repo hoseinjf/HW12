@@ -39,12 +39,16 @@ namespace HW12.Servise
 
         public List<Duty> GetAll()
         {
-            return _repository.GetAll();
+            return _repository.GetAll().OrderBy(x => x.EndTime).ToList();
         }
 
         public void Update(int id, Duty duty)
         {
             _repository.Update(id, duty);
+        }
+        public List<Duty> Search(string title)
+        {
+            return _repository.Search(title);
         }
     }
 }

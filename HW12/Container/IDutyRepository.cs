@@ -16,5 +16,6 @@ namespace HW12.Container
         List<Duty> GetAll();
         Duty Get(int id);
         void ChengStatus(int id, Duty duty);
+        List<Duty> Search(string title);
     }
 }

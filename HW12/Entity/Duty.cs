@@ -13,7 +13,7 @@ namespace HW12.Entity
         public string Title { get; set; }
         public string Description { get; set; }
         public EnumPriority Priority { get; set; }=EnumPriority.mid;
-        public EnumStatus Status { get; set; }
+        public EnumStatus Status { get; set; } = EnumStatus.non;
         public DateTime EndTime { get; set; }
 
         //public int PriorityId { get; set; }

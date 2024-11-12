@@ -15,5 +15,6 @@ namespace HW12.Servise.Contract
         List<Duty> GetAll();
         Duty Get(int id);
         void ChengStatus(int id, Duty duty);
+        List<Duty> Search(string title);
     }
 }

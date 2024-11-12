@@ -92,5 +92,17 @@ namespace HW12.Repository
                 throw new Exception("Id not found !!! ");
             }
         }
+        public List<Duty> Search(string title)
+        {
+            var duty = appContext.Duties.Where(d =>d.Title==title).ToList();
+            if (duty != null)
+            {
+                return duty;
+            }
+            else
+            {
+                throw new Exception("title not found !!! ");
+            }
+        }
     }
 }
